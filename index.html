@@ -4,7 +4,6 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
-        <title>Animated Template</title>
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="favicon.png" />
         <!-- Font Awesome -->
@@ -12,13 +11,14 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
         />
-        <!-- AOS Css -->
+        <!-- AOS Library -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
         <!-- Tailwind Library -->
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"
         />
+        <title>Animated Template</title>
     </head>
     <body class="text-gray-800 antialiased">
         <!-- Navigation -->
@@ -90,105 +90,140 @@
                         <i class="text-white fas fa-bars"></i>
                     </button>
                 </div>
-                <!-- Nav Right Side -->
-                <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
-                    <!-- Social Media Button -->
-                    <li class="flex items-center">
-                        <a
-                            class="
-                                lg:text-white
-                                lg:hover:text-gray-300
-                                text-gray-800
-                                px-3
-                                py-4
-                                lg:py-2
-                                flex
-                                items-center
-                                text-xs
-                                uppercase
-                                font-bold
-                            "
-                            href="#pablo"
-                        >
-                            <!-- Icon -->
-                            <i
+                <!-- Nav Flex Row -->
+                <div
+                    class="
+                        lg:flex
+                        flex-grow
+                        items-center
+                        bg-white
+                        lg:bg-transparent
+                        lg:shadow-none
+                        hidden
+                    "
+                    id="example-collapse-navbar"
+                >
+                    <!-- <ul class="flex flex-col lg:flex-row list-none mr-auto">
+              <li class="flex items-center">
+                <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" 
+                href="https://www.creative-tim.com/learning-lab/tailwindcss-starter-project#/landing">
+                Icon
+                <i class="lg:text-gray-300 text-gray-500 far fa-file-alt text-lg leading-lg mr-2"></i>
+                Docs
+                </a>
+              </li>
+            </ul> -->
+                    <!-- Nav Right Side -->
+                    <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+                        <!-- Social Media Button -->
+                        <li class="flex items-center">
+                            <a
                                 class="
-                                    lg:text-gray-300
-                                    text-gray-500
-                                    fab
-                                    fa-facebook
-                                    text-lg
-                                    leading-lg
+                                    lg:text-white
+                                    lg:hover:text-gray-300
+                                    text-gray-800
+                                    px-3
+                                    py-4
+                                    lg:py-2
+                                    flex
+                                    items-center
+                                    text-xs
+                                    uppercase
+                                    font-bold
                                 "
-                            ></i>
-                            <span class="lg:hidden inline-block ml-2">Share</span>
-                        </a>
-                    </li>
-                    <!-- Social Media Button -->
-                    <li class="flex items-center">
-                        <a
-                            class="
-                                lg:text-white
-                                lg:hover:text-gray-300
-                                text-gray-800
-                                px-3
-                                py-4
-                                lg:py-2
-                                flex
-                                items-center
-                                text-xs
-                                uppercase
-                                font-bold
-                            "
-                            href="#pablo"
-                        >
-                            <!-- Icon -->
-                            <i
+                                href="#pablo"
+                            >
+                                <!-- Icon -->
+                                <i
+                                    class="
+                                        lg:text-gray-300
+                                        text-gray-500
+                                        fab
+                                        fa-facebook
+                                        text-lg
+                                        leading-lg
+                                    "
+                                ></i>
+                                <span class="lg:hidden inline-block ml-2">Share</span>
+                            </a>
+                        </li>
+                        <!-- Social Media Button -->
+                        <li class="flex items-center">
+                            <a
                                 class="
-                                    lg:text-gray-300
-                                    text-gray-500
-                                    fab
-                                    fa-instagram
-                                    text-lg
-                                    leading-lg
+                                    lg:text-white
+                                    lg:hover:text-gray-300
+                                    text-gray-800
+                                    px-3
+                                    py-4
+                                    lg:py-2
+                                    flex
+                                    items-center
+                                    text-xs
+                                    uppercase
+                                    font-bold
                                 "
-                            ></i>
-                            <span class="lg:hidden inline-block ml-2">Tweet</span>
-                        </a>
-                    </li>
-                    <!-- Social Media Button -->
-                    <li class="flex items-center">
-                        <a
-                            class="
-                                lg:text-white
-                                lg:hover:text-gray-300
-                                text-gray-800
-                                px-3
-                                py-4
-                                lg:py-2
-                                flex
-                                items-center
-                                text-xs
-                                uppercase
-                                font-bold
-                            "
-                            href="#pablo"
-                        >
-                            <!-- Icon -->
-                            <i
+                                href="#pablo"
+                            >
+                                <!-- Icon -->
+                                <i
+                                    class="
+                                        lg:text-gray-300
+                                        text-gray-500
+                                        fab
+                                        fa-twitter
+                                        text-lg
+                                        leading-lg
+                                    "
+                                ></i>
+                                <span class="lg:hidden inline-block ml-2">Tweet</span>
+                            </a>
+                        </li>
+                        <!-- Social Media Button -->
+                        <li class="flex items-center">
+                            <a
                                 class="
-                                    lg:text-gray-300
-                                    text-gray-500
-                                    fab
-                                    fa-github
-                                    text-lg
-                                    leading-lg
+                                    lg:text-white
+                                    lg:hover:text-gray-300
+                                    text-gray-800
+                                    px-3
+                                    py-4
+                                    lg:py-2
+                                    flex
+                                    items-center
+                                    text-xs
+                                    uppercase
+                                    font-bold
                                 "
-                            ></i>
-                            <span class="lg:hidden inline-block ml-2">Star</span>
-                        </a>
-                    </li>
-                </ul>
+                                href="#pablo"
+                            >
+                                <!-- Icon -->
+                                <i
+                                    class="
+                                        lg:text-gray-300
+                                        text-gray-500
+                                        fab
+                                        fa-github
+                                        text-lg
+                                        leading-lg
+                                    "
+                                ></i>
+                                <span class="lg:hidden inline-block ml-2">Star</span>
+                            </a>
+                        </li>
+                        <!-- Button -->
+                        <!-- <li class="flex items-center">
+            <button
+              class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+              type="button"
+              style="transition: all 0.15s ease 0s;">
+              Icon
+              <i class="fas fa-arrow-alt-circle-down"></i>
+              Download
+            </button>
+          </li> -->
+                    </ul>
+                </div>
             </div>
         </nav>
         <!-- End of Navigation -->
@@ -203,7 +238,7 @@
                 <div
                     class="absolute top-0 w-full h-full bg-center bg-cover"
                     style="
-                        background: url(https://images.unsplash.com/photo-1622158756739-6e7be9c56baa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80);
+                        background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
                     "
                 >
                     <!-- Overlay -->
@@ -484,7 +519,7 @@
                                 <!-- Image -->
                                 <img
                                     alt="..."
-                                    src="https://images.unsplash.com/photo-1622216899879-89c73e9c46d6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80"
+                                    src="https://images.unsplash.com/photo-1512572525676-f9b59951929e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1252&q=80"
                                     class="w-full align-middle rounded-t-lg"
                                 />
                                 <blockquote class="relative p-8 mb-4">
@@ -561,7 +596,7 @@
                             <img
                                 alt="..."
                                 class="max-w-full rounded-lg shadow-lg"
-                                src="https://images.unsplash.com/photo-1622345520421-a6d30c7ab71c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80"
+                                src="https://images.unsplash.com/photo-1553678324-f84674bd7b24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
                             />
                         </div>
                         <!-- Text Box Container-->
@@ -709,7 +744,7 @@
                                 <!-- Image -->
                                 <img
                                     alt="..."
-                                    src="https://randomuser.me/api/portraits/men/65.jpg"
+                                    src="https://randomuser.me/api/portraits/men/25.jpg"
                                     class="shadow-lg rounded-full max-w-full mx-auto"
                                     style="max-width: 120px"
                                 />
@@ -785,7 +820,7 @@
                                 <!-- Image -->
                                 <img
                                     alt="..."
-                                    src="https://randomuser.me/api/portraits/women/65.jpg"
+                                    src="https://randomuser.me/api/portraits/women/19.jpg"
                                     class="shadow-lg rounded-full max-w-full mx-auto"
                                     style="max-width: 120px"
                                 />
@@ -844,7 +879,7 @@
                                 <!-- Image -->
                                 <img
                                     alt="..."
-                                    src="https://randomuser.me/api/portraits/women/66.jpg"
+                                    src="https://randomuser.me/api/portraits/women/63.jpg"
                                     class="shadow-lg rounded-full max-w-full mx-auto"
                                     style="max-width: 120px"
                                 />
@@ -1588,19 +1623,7 @@
     </body>
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            delay: 200, // values from 0 to 3000, with step 50ms
-            duration: 1500, // values from 0 to 3000, with step 50ms
-            once: false, // whether animation should happen only once - while scrolling down
-            mirror: false, // whether elements should animate out while scrolling past them
-        });
-    </script>
+    <script src="script.js"></script>
     <!-- Navigation Script -->
-    <script>
-        function toggleNavbar(collapseID) {
-            document.getElementById(collapseID).classList.toggle('hidden');
-            document.getElementById(collapseID).classList.toggle('block');
-        }
-    </script>
+    <script src="navbar.js"></script>
 </html>
